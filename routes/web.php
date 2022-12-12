@@ -29,6 +29,10 @@ Route::get('/product', function () {
     return view('product');
 });
 
+Route::get('/products', function () {
+    return view('products');
+});
+
 Route::get('/basket', function () {
     return view('basket');
 });
