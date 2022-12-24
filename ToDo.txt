@@ -1,0 +1,5 @@
+implement authourisation for pages.
+create admin page to add products + authorise to admins only.
+create more types.
+create basket table and basket page.
+clean website.
