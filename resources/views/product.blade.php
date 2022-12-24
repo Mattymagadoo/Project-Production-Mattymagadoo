@@ -2,4 +2,9 @@
  
 @section('title', 'Page Title')
 
-<h1>Product</h1>
+@section('content')
+<img src='{{$product->image}}'>
+<p> Product: {{$product->title}}</p>
+<p> type: {{$product->description}}</p>
+<p> price: {{$product->price}}</p>
+@stop

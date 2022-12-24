@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProductController;
+use App\Models\product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,13 +27,9 @@ Route::get('/account', function () {
     return view('account');
 });
 
-Route::get('/product', function () {
-    return view('product');
-});
+Route::get('/products/{product}', [ProductController::class, 'show']);
 
-Route::get('/products', function () {
-    return view('products');
-});
+Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/basket', function () {
     return view('basket');
@@ -40,8 +38,6 @@ Route::get('/basket', function () {
 Route::get('/laravel', function () {
     return view('welcome');
 });
-
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');
