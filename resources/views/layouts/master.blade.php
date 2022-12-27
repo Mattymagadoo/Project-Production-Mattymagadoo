@@ -34,6 +34,7 @@
             </button>
             @endguest
           </div>
+          
           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
@@ -52,6 +53,15 @@
           </div>
           </div>
         </nav>
+        <div class="inline-block bg-black w-full h-12 mb-4">
+          <ul class="text-white text-center list-none h-full block relative">
+              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products" class="mx-auto text-lg">Product</a></li>
+              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=pants" class="mx-auto text-lg">Pants</a></li>
+              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=shirt" class="mx-auto text-lg">shirts</a></li>
+              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=accessories" class="mx-auto text-lg">Accessories</a></li>
+              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=coats" class="mx-auto text-lg">Coats</a></li>
+          </ul>
+        </div>
         @show
             @yield('content')
     </body>

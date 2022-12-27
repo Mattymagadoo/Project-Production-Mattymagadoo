@@ -4,17 +4,6 @@
 
 @section('content')
 
-<p>{{$type}}</p>
-
-<div class="inline-block bg-black w-full h-12 mb-6">
-    <ul class="text-white text-center list-none h-full block relative">
-        <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/product" class="mx-auto text-lg">Product</a></li>
-        <li class="inline-block float-none w-auto px-5 h-full"><a href="" class="mx-auto text-lg">Pants</a></li>
-        <li class="inline-block float-none w-auto px-5 h-full"><a href="" class="mx-auto text-lg">Shoes</a></li>
-        <li class="inline-block float-none w-auto px-5 h-full"><a href="" class="mx-auto text-lg">Accessories</a></li>
-        <li class="inline-block float-none w-auto px-5 h-full"><a href="" class="mx-auto text-lg">Coats</a></li>
-    </ul>
-</div>
 <div class="container flex flex-wrap m-auto justify-between mx-auto">
     <div class=" w-1/4 h-min-52">
         <div class=" bg-red-600 h-28 align-top m-2.5">

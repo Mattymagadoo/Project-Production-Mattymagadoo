@@ -33,7 +33,7 @@ Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/basket', function () {
     return view('basket');
-});
+})->middleware(['auth'])->name('dashboard');;
 
 Route::get('/laravel', function () {
     return view('welcome');

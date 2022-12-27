@@ -3,15 +3,7 @@
 @section('title', 'Page Title')
  
 @section('content')
-    <div class="inline-block bg-black w-full h-12 mb-4">
-        <ul class="text-white text-center list-none h-full block relative">
-            <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/product" class="mx-auto text-lg">Product</a></li>
-            <li class="inline-block float-none w-auto px-5 h-full"><a href="" class="mx-auto text-lg">Pants</a></li>
-            <li class="inline-block float-none w-auto px-5 h-full"><a href="" class="mx-auto text-lg">Shoes</a></li>
-            <li class="inline-block float-none w-auto px-5 h-full"><a href="" class="mx-auto text-lg">Accessories</a></li>
-            <li class="inline-block float-none w-auto px-5 h-full"><a href="" class="mx-auto text-lg">Coats</a></li>
-        </ul>
-    </div>
+<p></p>
     <div class="flex my-8">
         <div class="flex-1 w-72">
         </div>
