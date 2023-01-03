@@ -15,6 +15,25 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script>
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          // Close the dropdown menu if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+        </script>
     </head>
     <body>
         @section('navbar')
@@ -25,6 +44,18 @@
               <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
           </a>
           <div class="flex md:order-2">
+            @auth
+            <p class="font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">{{ Auth::user()->name}}</p>
+            <form method="POST" action="{{ route('logout') }}">
+              @csrf
+              <x-dropdown-link :href="route('logout')"
+                      onclick="event.preventDefault();
+                                  this.closest('form').submit();">
+                  {{ __('Log Out') }}
+              </x-dropdown-link>
+            </form>
+            @endauth
+
             @guest
               <button type="button" onclick="window.location.href='/Assessment2/public/login'" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
               <a href="/Assessment2/public/register" class="font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">Sign up</a>
@@ -55,11 +86,10 @@
         </nav>
         <div class="inline-block bg-black w-full h-12 mb-4">
           <ul class="text-white text-center list-none h-full block relative">
-              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products" class="mx-auto text-lg">Product</a></li>
-              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=pants" class="mx-auto text-lg">Pants</a></li>
-              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=shirt" class="mx-auto text-lg">shirts</a></li>
-              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=accessories" class="mx-auto text-lg">Accessories</a></li>
-              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=coats" class="mx-auto text-lg">Coats</a></li>
+              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products" class="mx-auto text-lg">Products</a></li>
+              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=game" class="mx-auto text-lg">Games</a></li>
+              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=book" class="mx-auto text-lg">Books</a></li>
+              <li class="inline-block float-none w-auto px-5 h-full"><a href="/Assessment2/public/products?type=film" class="mx-auto text-lg">Films</a></li>
           </ul>
         </div>
         @show

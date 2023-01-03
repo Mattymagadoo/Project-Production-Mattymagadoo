@@ -9,12 +9,10 @@ class ProductController extends Controller
 {
     public function index(){
         $type = request('type');
-        if ($type == 'shirt') {
-            $products = Product::all()->where('type','=','shirt');
-        }elseif($type =='pants'){
-            $products = Product::all()->where('type','=','pants');
+        if ($type == '') {
+            $products = Product::all();
         }else{
-           $products = Product::all(); 
+            $products = Product::all()->where('type','=',$type); 
         }
         
         return view('products', [

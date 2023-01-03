@@ -2,6 +2,10 @@
 @import 'components';
 @import 'utilities';
 @font-face {
-    font-family: "varela";
-    src: url("../public/fonts/Varela-Regular.ttf");
-  }
+  font-family: "varela";
+  src: url("../public/fonts/Varela-Regular.ttf");
+}
+
+.test {
+  background-color: aqua;
+}

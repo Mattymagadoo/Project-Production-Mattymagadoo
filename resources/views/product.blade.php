@@ -4,7 +4,8 @@
 
 @section('content')
 <img src='{{$product->image}}'>
-<p> Product: {{$product->title}}</p>
-<p> type: {{$product->description}}</p>
-<p> price: {{$product->price}}</p>
+<p>Product: {{$product->name}}</p>
+<p>Description: {{$product->description}}</p>
+<p>Type: {{$product->type}}</p>
+<p>Price: {{$product->price}}</p>
 @stop
