@@ -9,8 +9,4 @@ class type extends Model
 {
     use HasFactory;
 
-    public function attribute()
-    {
-        return $this->hasMany(attribute::class);
-    }
 }

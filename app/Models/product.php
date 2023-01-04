@@ -16,10 +16,5 @@ class product extends Model
         
     ];
 
-    public function attribute()
-    {
-        return $this->hasOne(attribute::class);
-    }
-
 
 }

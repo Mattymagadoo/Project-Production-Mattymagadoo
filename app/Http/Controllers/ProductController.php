@@ -32,11 +32,8 @@ class ProductController extends Controller
             $products = $products->where('length','=',$length);
         }
 
-        $attribute = attribute::find(1);
-
         return view('products', [
-            'products' => $products,
-            'attribute' => $attribute
+            'products' => $products
         ]);
     }
 
