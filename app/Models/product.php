@@ -16,4 +16,6 @@ class product extends Model
         'type'
         
     ];
+
+
 }
