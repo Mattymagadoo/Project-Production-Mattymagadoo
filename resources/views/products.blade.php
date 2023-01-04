@@ -6,8 +6,9 @@
 
 <div class="container flex flex-wrap m-auto justify-between mx-auto test">
     <div class="w-1/4 h-min-52">
-        <div class=" bg-red-600 h-auto align-top m-2.5">
+        <div class="bg-gray-200 h-auto align-top m-2.5">
             <form action="" target="_self" method="get">
+                <input type="search" id="Search" name="search" placeholder="Search" class=" block">
                 <input type="radio" id="Game" name="type" value="game">
                     <label for="game">Game</label><br>
                 <input type="radio" id="Book" name="type" value="book">
@@ -19,9 +20,9 @@
                 <br>
                 <select id="PG" name="pg">
                     <option></option>
-                    <option value="u">U</option>
-                    <option value="pg">PG</option>
-                    <option value="a12">A12</option>
+                    <option value="U">U</option>
+                    <option value="PG">PG</option>
+                    <option value="A12">A12</option>
                     <option value="15">15</option>
                     <option value="18">18</option>
                 </select>
@@ -30,8 +31,6 @@
                 <br>
                 <input type="number" id="Pages" name="pages" placeholder="Pages..." >
                 <input type="submit" value="Submit">
-                <p id="demo">A Paragraph</p>
-<button type="button" onclick="myFunction()">Try it</button>
             </form>
         </div>
     </div>

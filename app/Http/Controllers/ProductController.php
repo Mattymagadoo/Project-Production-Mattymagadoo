@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\attribute;
 use Illuminate\Http\Request;
 use App\Models\product;
 
@@ -10,31 +11,31 @@ class ProductController extends Controller
     public function index(){
         $type = request('type');
         $pg = request('pg');
-        $author = request('author');
+        $pages = request('pages');
         $length = request('length');
-        if ($type == '') {
-            $products = Product::all();
-        }elseif($type == 'game'){
-            $products = Product::all()
-            ->where('type','=',$type)
-            ->where('pg', '=',$pg)
-            ->orwhere('pg','=','');
-        }elseif($type == 'book'){
-            $products = Product::all()
-            ->where('type','=',$type)
-            ->where('author', '=',$author)
-            ->orwhere('author','=','');
-        }elseif($type == 'film'){
-            $products = Product::all()
-            ->where('type','=',$type)
-            ->where('pg', '=',$pg)
-            ->orwhere('pg','=','');
-        }else{
-            $products = Product::all()->where('type','=',$type);
+        $products = Product::all();
+
+        if($type != null){
+           $products = $products->where('type','=',$type); 
         }
         
+        if($pg != null){
+            $products = $products->where('pg','=',$pg);
+        }
+
+        if($pages != null){
+            $products = $products->where('pages','=',$pages);
+        }
+
+        if($length != null){
+            $products = $products->where('length','=',$length);
+        }
+
+        $attribute = attribute::find(1);
+
         return view('products', [
-            'products' => $products
+            'products' => $products,
+            'attribute' => $attribute
         ]);
     }
 

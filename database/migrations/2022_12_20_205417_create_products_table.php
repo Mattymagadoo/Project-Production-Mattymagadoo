@@ -19,8 +19,13 @@ class CreateProductsTable extends Migration
             $table->string('description');
             $table->decimal('price');
             $table->string('image');
-            $table->string('type');
+            $table->integer('type_ID');
+            $table->string('pg');
+            $table->string('length');
+            $table->integer('pages');
             $table->timestamps();
+
+            //$table->foriegn('type_ID')->references('id')->on('attributes');
         });
     }
 

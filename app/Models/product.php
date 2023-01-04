@@ -13,9 +13,17 @@ class product extends Model
         'description',
         'price',
         'image',
-        'type'
+        'type_ID',
+        'pg',
+        'length',
+        'pages'
         
     ];
+
+    public function attribute()
+    {
+        return $this->hasOne(attribute::class);
+    }
 
 
 }
