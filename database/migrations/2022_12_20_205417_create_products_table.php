@@ -20,9 +20,6 @@ class CreateProductsTable extends Migration
             $table->decimal('price');
             $table->string('image');
             $table->integer('type_ID');
-            $table->string('pg');
-            $table->string('length');
-            $table->integer('pages');
             $table->timestamps();
 
             //$table->foriegn('type_ID')->references('id')->on('attributes');

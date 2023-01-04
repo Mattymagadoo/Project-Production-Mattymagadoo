@@ -27,13 +27,12 @@ Route::get('/account', function () {
     return view('account');
 });
 
+Route::get('/products/{product}/edit' , [ProductController::class, 'edit']);
+Route::get('/products/{product}/delete' , [ProductController::class, 'delete']);
 Route::get('/products/{product}', [ProductController::class, 'show']);
-
+Route::patch('/products/{product}', [ProductController::class, 'update']);
 Route::get('/products', [ProductController::class, 'index']);
 
-Route::get('/basket', function () {
-    return view('basket');
-})->middleware(['auth'])->name('dashboard');;
 
 Route::get('/laravel', function () {
     return view('welcome');

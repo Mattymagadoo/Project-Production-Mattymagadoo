@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\attribute;
 use Illuminate\Http\Request;
 use App\Models\product;
+use GrahamCampbell\ResultType\Success;
 
 class ProductController extends Controller
 {
@@ -43,4 +44,28 @@ class ProductController extends Controller
         $product = product::findorfail($id);
     return view('product', ['product' => $product]);
     }
+
+    public function edit($id){
+        $product = product::findorfail($id);
+    return view('editProduct', ['product' => $product]);
+    }
+
+    public function update(Request $request,$product){
+        $input = $request->all();
+        $product = Product::find($product);
+        $product->name = $input['name'];
+        $product->description = $input['description'];
+        $product->price = $input['price'];
+        $product->type_ID = $input['type_ID'];
+
+        $product->save();
+        return redirect('/')->with('success', 'Post Updated!');
+    }
+
+    public function delete($id) 
+       {
+          $product = Product::findorfail($id)->delete();
+          echo ("User Record deleted successfully.");
+          return redirect('/products');
+       }
 }

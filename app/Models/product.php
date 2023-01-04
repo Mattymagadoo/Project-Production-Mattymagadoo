@@ -12,11 +12,7 @@ class product extends Model
         'name',
         'description',
         'price',
-        'image',
-        'type_ID',
-        'pg',
-        'length',
-        'pages'
+        'type_ID'
         
     ];
 
