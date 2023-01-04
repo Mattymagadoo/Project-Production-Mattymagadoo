@@ -56,7 +56,7 @@ class ProductController extends Controller
         $product->name = $input['name'];
         $product->description = $input['description'];
         $product->price = $input['price'];
-        $product->type_ID = $input['type_ID'];
+        $product->type_ID = $input['type'];
 
         $product->save();
         return redirect('/')->with('success', 'Post Updated!');
