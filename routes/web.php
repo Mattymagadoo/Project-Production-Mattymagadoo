@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\ProductController;
-use App\Models\product;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/' , [PostController::class, 'index']);
 
 Route::get('/checkout', function () {
     return view('checkout');
@@ -32,6 +31,10 @@ Route::get('/products/{product}/delete' , [ProductController::class, 'delete']);
 Route::get('/products/{product}', [ProductController::class, 'show']);
 Route::patch('/products/{product}', [ProductController::class, 'update']);
 Route::get('/products', [ProductController::class, 'index']);
+
+Route::get('/department', [DepartmentController::class, 'index']);
+
+Route::get('/department/{department}', [DepartmentController::class, 'category']);
 
 
 Route::get('/laravel', function () {

@@ -5346,6 +5346,10 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -22597,7 +22601,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
   \*******************************/
 /***/ (() => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):\nTypeError: Cannot read properties of undefined (reading '500')\n    at C:\\xampp\\htdocs\\Assessment2\\node_modules\\@tailwindcss\\forms\\src\\index.js:28:59\n    at registerPlugins (C:\\xampp\\htdocs\\Assessment2\\node_modules\\tailwindcss\\lib\\lib\\setupContextUtils.js:765:61)\n    at createContext (C:\\xampp\\htdocs\\Assessment2\\node_modules\\tailwindcss\\lib\\lib\\setupContextUtils.js:1121:5)\n    at getContext (C:\\xampp\\htdocs\\Assessment2\\node_modules\\tailwindcss\\lib\\lib\\setupContextUtils.js:1177:20)\n    at C:\\xampp\\htdocs\\Assessment2\\node_modules\\tailwindcss\\lib\\lib\\setupTrackingContext.js:114:63\n    at C:\\xampp\\htdocs\\Assessment2\\node_modules\\tailwindcss\\lib\\processTailwindFeatures.js:46:11\n    at plugins (C:\\xampp\\htdocs\\Assessment2\\node_modules\\tailwindcss\\lib\\index.js:38:63)\n    at LazyResult.runOnRoot (C:\\xampp\\htdocs\\Assessment2\\node_modules\\postcss\\lib\\lazy-result.js:339:16)\n    at LazyResult.runAsync (C:\\xampp\\htdocs\\Assessment2\\node_modules\\postcss\\lib\\lazy-result.js:393:26)\n    at async Object.loader (C:\\xampp\\htdocs\\Assessment2\\node_modules\\postcss-loader\\dist\\index.js:97:14)\n    at processResult (C:\\xampp\\htdocs\\Assessment2\\node_modules\\webpack\\lib\\NormalModule.js:751:19)\n    at C:\\xampp\\htdocs\\Assessment2\\node_modules\\webpack\\lib\\NormalModule.js:853:5\n    at C:\\xampp\\htdocs\\Assessment2\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\xampp\\htdocs\\Assessment2\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\xampp\\htdocs\\Assessment2\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.loader (C:\\xampp\\htdocs\\Assessment2\\node_modules\\postcss-loader\\dist\\index.js:142:7)");
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):\nError: Failed to find 'base'\n  in [\n    C:\\xampp\\htdocs\\component-2-Mattymagadoo\\resources\\css\n  ]\n    at C:\\xampp\\htdocs\\component-2-Mattymagadoo\\node_modules\\postcss-import\\lib\\resolve-id.js:35:13\n    at async LazyResult.runAsync (C:\\xampp\\htdocs\\component-2-Mattymagadoo\\node_modules\\postcss\\lib\\lazy-result.js:396:11)\n    at async Object.loader (C:\\xampp\\htdocs\\component-2-Mattymagadoo\\node_modules\\postcss-loader\\dist\\index.js:97:14)\n    at processResult (C:\\xampp\\htdocs\\component-2-Mattymagadoo\\node_modules\\webpack\\lib\\NormalModule.js:751:19)\n    at C:\\xampp\\htdocs\\component-2-Mattymagadoo\\node_modules\\webpack\\lib\\NormalModule.js:853:5\n    at C:\\xampp\\htdocs\\component-2-Mattymagadoo\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\xampp\\htdocs\\component-2-Mattymagadoo\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\xampp\\htdocs\\component-2-Mattymagadoo\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.loader (C:\\xampp\\htdocs\\component-2-Mattymagadoo\\node_modules\\postcss-loader\\dist\\index.js:142:7)");
 
 /***/ }),
 
