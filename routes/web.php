@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -36,6 +37,7 @@ Route::get('/department', [DepartmentController::class, 'index']);
 
 Route::get('/department/{department}', [DepartmentController::class, 'category']);
 
+Route::get('/documents', [DocumentController::class, 'index']);
 
 Route::get('/laravel', function () {
     return view('welcome');

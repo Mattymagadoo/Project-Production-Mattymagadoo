@@ -3,7 +3,9 @@
 @section('title', 'Page Title')
 
 @section('content')
-    <img alt="" src="images\NSI-Ext.png">
+    <div >
+        <img class="z-0" alt="" src="images\NSI-Ext.png">
+    </div>
     <div class="flex my-8">
         <div class="flex-1 w-72">
         </div>

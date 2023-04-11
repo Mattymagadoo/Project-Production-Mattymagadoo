@@ -14,8 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //Generate 10 random users
         \App\Models\User::factory(10)->create();
+
+        //Generate 10 random products
         \App\Models\product::factory(10)->create();
+
+        //Generate
         // \App\Models\post::factory(10)->create();
 
         \App\Models\type::factory()->create(['id' => '1','type_name' => 'game']);
