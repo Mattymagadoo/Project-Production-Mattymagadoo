@@ -15,25 +15,6 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <script>
-          function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-          }
-
-          // Close the dropdown menu if the user clicks outside of it
-          window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-              var dropdowns = document.getElementsByClassName("dropdown-content");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-                }
-              }
-            }
-          }
-        </script>
     </head>
     <body>
         @section('navbar')
@@ -76,6 +57,9 @@
               <li class="inline-block float-none w-auto py-auto px-5 h-full"><a href="/products" class="mx-auto text-lg">Products</a></li>
               <li class="inline-block float-none w-auto py-auto px-5 h-full"><a href="/department" class="mx-auto text-lg">Department</a></li>
               <li class="inline-block float-none w-auto py-auto px-5 h-full"><a href="/documents" class="mx-auto text-lg">Documents</a></li>
+              @role('IT')
+                    <li class="inline-block float-none w-auto py-auto px-5 h-full"><a href="" class="mx-auto text-lg">Admin</a></li>
+              @endrole
           </ul>
         </div>
         @show

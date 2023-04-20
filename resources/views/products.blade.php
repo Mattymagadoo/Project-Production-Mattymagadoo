@@ -36,14 +36,15 @@
     </div>
     <div href="" class="flex-wrap w-3/4 border-solid border-slate-600 border">
         @foreach ($products as $product)
-        <a href="products/{{$product->id}}" class=" w-52 h-72 inline-block justify-between m-2 mb-4">
-            <img src="{{$product->image}}" class=" h-4/5 w-full">
+
+        <a href="products/{{$product->name}}" class=" w-52 h-72 inline-block justify-between m-2 mb-4">
             <h1>{{$product->name}}</h1>
             <p>{{$product->type}}</p>
             <!-- <p>{{$product->type}}</p> -->
             <p class=" mt-auto">£{{$product->price}}</p>
         </a>
         @endforeach
+
     </div>
 </div>
 @stop

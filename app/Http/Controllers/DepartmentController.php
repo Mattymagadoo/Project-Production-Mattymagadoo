@@ -11,7 +11,8 @@ class DepartmentController extends Controller
 {
     public function index(){
 
-        $users = user::where('department_id',1)->get();
+        $dep_id = auth()->user()->department_id;
+        $users = user::where('department_id',$dep_id)->get();
 
 
         return view('department', [
@@ -19,14 +20,6 @@ class DepartmentController extends Controller
         ]);
     }
 
-    public function department(){
-        $id = Auth::id();
-        $department =
-        $users = user::where('department_name','customer service')->get();
 
-        return view('department', [
-            'users' => $users
-        ]);
-    }
 
 }

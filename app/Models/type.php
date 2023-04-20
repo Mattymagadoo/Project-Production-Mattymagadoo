@@ -8,5 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class type extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'type'
+    ];
 
+    public function templates()
+    {
+        return $this->hasMany(productTemplate::class);
+    }
 }

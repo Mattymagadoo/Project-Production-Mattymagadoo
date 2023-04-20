@@ -14,12 +14,13 @@ class ProductController extends Controller
         $pg = request('pg');
         $pages = request('pages');
         $length = request('length');
-        $products = Product::all();
+        $products = Product::all()->unique('name');
 
-        if($type != null){
-           $products = $products->where('type','=',$type); 
+
+        /*if($type != null){
+           $products = $products->where('type','=',$type);
         }
-        
+
         if($pg != null){
             $products = $products->where('pg','=',$pg);
         }
@@ -31,15 +32,16 @@ class ProductController extends Controller
         if($length != null){
             $products = $products->where('length','=',$length);
         }
+        */
 
         return view('products', [
             'products' => $products
         ]);
     }
 
-    public function show($id){
-        $product = product::findorfail($id);
-    return view('product', ['product' => $product]);
+    public function show($name){
+        $products = product::all()->where('name', '=', $name);
+    return view('product', ['products' => $products]);
     }
 
     public function edit($id){
@@ -59,7 +61,7 @@ class ProductController extends Controller
         return redirect('/')->with('success', 'Post Updated!');
     }
 
-    public function delete($id) 
+    public function delete($id)
        {
           $product = Product::findorfail($id)->delete();
           echo ("User Record deleted successfully.");

@@ -1,5 +1,5 @@
 @extends('layouts.master')
- 
+
 @section('title', 'Page Title')
 
 @section('content')
@@ -9,7 +9,7 @@
 <p>Type: {{$product->type}}</p>
 <p>Price: {{$product->price}}</p>
 <div>
-    <form action="/Assessment2/public/products/{{$product->id}}" method="POST">
+    <form action="update" method="POST">
         @csrf
         @method('PATCH')
         <input type="text" id="Name" name="name" value="{{$product->name}}" >
@@ -22,7 +22,7 @@
                     <option value="2">book</option>
                     <option value="3">film</option>
                 </select>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Update">
     </form>
 </div>
 
