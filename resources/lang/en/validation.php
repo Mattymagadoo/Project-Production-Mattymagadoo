@@ -84,8 +84,8 @@ return [
         'string' => 'The :attribute must not be greater than :max characters.',
         'array' => 'The :attribute must not have more than :max items.',
     ],
-    'mimes' => 'The :attribute must be a file of type: :values.',
-    'mimetypes' => 'The :attribute must be a file of type: :values.',
+    'mimes' => 'The :attribute must be a file of productType: :values.',
+    'mimetypes' => 'The :attribute must be a file of productType: :values.',
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
         'file' => 'The :attribute must be at least :min kilobytes.',

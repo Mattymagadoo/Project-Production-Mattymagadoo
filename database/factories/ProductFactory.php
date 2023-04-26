@@ -17,7 +17,7 @@ class ProductFactory extends Factory
             'name' => $this->faker->name(),
             'description' => $this->faker->paragraph(1),
             'price' => $this->faker->randomFloat(2,1,50),
-            'type' => $this->faker->randomElement(['extinguisher', 'sign', 'blanket']),
+            'productType' => $this->faker->randomElement(['extinguisher', 'sign', 'blanket']),
         ];
     }
 }

@@ -5,20 +5,24 @@ namespace App\Http\Controllers;
 use App\Models\attribute;
 use Illuminate\Http\Request;
 use App\Models\product;
+use App\Models\productTemplate;
 use GrahamCampbell\ResultType\Success;
+use SebastianBergmann\Template\Template;
 
 class ProductController extends Controller
 {
     public function index(){
-        $type = request('type');
+
+        $products = productTemplate::all();
+
+
+        /*$type = request('productType');
         $pg = request('pg');
         $pages = request('pages');
         $length = request('length');
-        $products = Product::all()->unique('name');
 
-
-        /*if($type != null){
-           $products = $products->where('type','=',$type);
+        if($productType != null){
+           $products = $products->where('productType','=',$productType);
         }
 
         if($pg != null){
@@ -55,7 +59,7 @@ class ProductController extends Controller
         $product->name = $input['name'];
         $product->description = $input['description'];
         $product->price = $input['price'];
-        $product->type_ID = $input['type'];
+        $product->type_ID = $input['productType'];
 
         $product->save();
         return redirect('/')->with('success', 'Post Updated!');

@@ -9,11 +9,7 @@ class product extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
-        'description',
-        'price',
-        'type'
-
+        'batch'
     ];
 
     public function template()

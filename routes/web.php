@@ -4,6 +4,7 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PostController::class, 'index'])
 ->middleware(['auth']);
+
+Route::get('/users', [PostController::class, 'index']);
+
+Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/adminUsers', [AdminController::class, 'adminUsers']);
 
 Route::get('/checkout', function () {
     return view('checkout');
@@ -39,6 +45,9 @@ Route::get('/department', [DepartmentController::class, 'index']);
 Route::get('/department/{department}', [DepartmentController::class, 'category']);
 
 Route::get('/documents', [DocumentController::class, 'index']);
+
+Route::get('/post-create', [PostController::class, 'newPost']);
+Route::post('/post-create', [PostController::class, 'create']);
 
 Route::get('/laravel', function () {
     return view('welcome');

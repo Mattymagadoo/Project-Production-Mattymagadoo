@@ -11,6 +11,12 @@
         </div>
         <div class=" w-1/2 pl-10 pr-10">
             <p class="w-full align-middle text-center text-xl mb-8">Blog</p>
+            <div class="flex">
+                <div class="flex-grow"></div>
+                <div class="w-1/6 h-10 mb-3">
+                    <input class="bg-red-600 rounded-lg text-white w-full h-10 hover:bg-amber-500" type="button" onclick="location.href='/post-create';" value="Post" />
+                </div>
+            </div>
             @foreach ($posts as $post)
                 <div class="border-2 mb-4 p-5 pb-1">
                     <div class="mb-2">
@@ -19,7 +25,9 @@
                     </div>
                     <!-- <p>{{$post->name}}</p> -->
                     <h1 class="text-xl mb-2">{{$post->post_title}}</h1>
-                    <img src="https://via.placeholder.com/200x200.png/002255?tex..." alt="example" class="mb-2 w-full rounded-md">
+                    @if($post->post_image != null)
+                        <img src="https://via.placeholder.com/640x480.png/009955?text=eum" alt="example" class="mb-2 w-full rounded-md">
+                    @endif
                     <p class="mb-2">{{$post->post_body}}</p>
                     <p class="mt-auto text-right">{{$post->created_at}}</p>
                 </div>

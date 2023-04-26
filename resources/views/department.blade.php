@@ -4,6 +4,11 @@
 
 @section('content')
     <div>
+        <div>
+            <h1>
+                Department: {{Auth::user()->department->dept_name}}
+            </h1>
+        </div>
         <div class="m-6 p-2 w-1/5 border-2">
             <h1 class="text-4xl">Contacts</h1>
             @foreach($users as $user)

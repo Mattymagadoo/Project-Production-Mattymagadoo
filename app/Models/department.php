@@ -13,7 +13,7 @@ class department extends Model
         'dept_name',
         'description',
         'price',
-        'type'
+        'productType'
 
     ];
 

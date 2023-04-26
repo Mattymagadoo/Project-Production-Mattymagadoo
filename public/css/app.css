@@ -6503,6 +6503,10 @@ select {
   height: 24rem;
 }
 
+.h-32rem {
+  height: 32rem;
+}
+
 .h-auto {
   height: auto;
 }
@@ -12916,6 +12920,18 @@ select {
 
 .rounded-tl-full {
   border-top-left-radius: 9999px;
+}
+
+.tr-alt:nth-child(even){
+background-color: #f2f2f2;
+}
+
+.tr-alt:nth-child(odd){
+background-color: #cfcfd0;
+}
+
+tr.tr-alt div{
+    height:20px;
 }
 
 .rounded-tr-none {

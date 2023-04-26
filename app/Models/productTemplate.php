@@ -12,8 +12,7 @@ class productTemplate extends Model
         'name',
         'description',
         'price',
-        'type'
-
+        'stock'
     ];
 
     public function products()
@@ -23,6 +22,6 @@ class productTemplate extends Model
 
     public function type()
     {
-        return $this->belongsTo(type::class);
+        return $this->belongsTo(productType::class);
     }
 }

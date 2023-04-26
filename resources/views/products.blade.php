@@ -39,8 +39,8 @@
 
         <a href="products/{{$product->name}}" class=" w-52 h-72 inline-block justify-between m-2 mb-4">
             <h1>{{$product->name}}</h1>
-            <p>{{$product->type}}</p>
-            <!-- <p>{{$product->type}}</p> -->
+            <p>{{$product->type->productType}}</p>
+            <p>{{$product->stock}}</p>
             <p class=" mt-auto">£{{$product->price}}</p>
         </a>
         @endforeach

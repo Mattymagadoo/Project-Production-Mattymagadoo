@@ -15,6 +15,26 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script>function adminTab(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            } </script>
     </head>
     <body>
         @section('navbar')
@@ -58,7 +78,7 @@
               <li class="inline-block float-none w-auto py-auto px-5 h-full"><a href="/department" class="mx-auto text-lg">Department</a></li>
               <li class="inline-block float-none w-auto py-auto px-5 h-full"><a href="/documents" class="mx-auto text-lg">Documents</a></li>
               @role('IT')
-                    <li class="inline-block float-none w-auto py-auto px-5 h-full"><a href="" class="mx-auto text-lg">Admin</a></li>
+                    <li class="inline-block float-none w-auto py-auto px-5 h-full"><a href="/admin" class="mx-auto text-lg">Admin</a></li>
               @endrole
           </ul>
         </div>
